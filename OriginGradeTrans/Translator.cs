@@ -12,7 +12,7 @@ namespace OriginGradeTrans
 {
     class Translator
     {
-        static string mainObjFlags = "公共必修;学科基础;专业必修";
+        static string mainObjFlags = "公共必修;学科基础;专业必修;专业核心";
 
         string originFileName;  //源文件
         string targetFileName;  //新文件
