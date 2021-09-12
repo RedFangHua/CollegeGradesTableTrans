@@ -62,13 +62,14 @@ namespace OriginGradeTrans
             originSheet = originBook.GetSheetAt(0); //开第一张表
 
             int StartRow = 2;   //从第三行开始有有效数据
-            
+
+            debugOut("成绩单采样中");
+
             IRow Row_One = originSheet.GetRow(2);
-            String Name_Const = Row_One.GetCell(2).ToString();  //用于判断是同一人名下数据的参考名字
             String ObjName_Current;
             String ObjType_Current;
             
-            while (Row_One.GetCell(2).ToString() == Name_Const)
+            while (Row_One != null)
             {
                 ObjName_Current = Row_One.GetCell(6).ToString();
                 ObjType_Current = Row_One.GetCell(7).ToString();
@@ -252,6 +253,8 @@ namespace OriginGradeTrans
         //向主科记录表中添加新的主科
         public void AppendMainObj(string ObjectName)
         {
+            if (ObjectName == "大学英语（三）")
+                return;
             if (!CheckIsMainObj(ObjectName))    //查重
             {
                 var Obj_T = new ObjectInfo()
