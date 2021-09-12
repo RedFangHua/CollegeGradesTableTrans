@@ -17,6 +17,5 @@ C:\Users\guoku\source\repos\OriginGradeTrans\OriginGradeTrans\obj\Release\Origin
 C:\Users\guoku\source\repos\OriginGradeTrans\OriginGradeTrans\obj\Release\OriginGradeTrans.Properties.Resources.resources
 C:\Users\guoku\source\repos\OriginGradeTrans\OriginGradeTrans\obj\Release\OriginGradeTrans.csproj.GenerateResource.cache
 C:\Users\guoku\source\repos\OriginGradeTrans\OriginGradeTrans\obj\Release\OriginGradeTrans.csproj.CoreCompileInputs.cache
-C:\Users\guoku\source\repos\OriginGradeTrans\OriginGradeTrans\obj\Release\OriginGradeTrans.csproj.CopyComplete
 C:\Users\guoku\source\repos\OriginGradeTrans\OriginGradeTrans\obj\Release\OriginGradeTrans.exe
 C:\Users\guoku\source\repos\OriginGradeTrans\OriginGradeTrans\obj\Release\OriginGradeTrans.pdb

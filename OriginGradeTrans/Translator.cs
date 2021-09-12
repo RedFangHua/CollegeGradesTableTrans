@@ -172,6 +172,10 @@ namespace OriginGradeTrans
                 IRow CLine = targetSheet.GetRow(i + StartLine);
                 ICell[] CCell = new ICell[3 + objRect.Objects.Count];
 
+                bool ExpectedKClass = false;        //K班例外情况
+                if (metaList[i].GetGrade("大学英语（三）") != null)
+                    ExpectedKClass = true;
+
                 for(int j = 3; j < objRect.Objects.Count + 3; j++)  //每个成绩
                 {
                     CCell[j] = CLine.CreateCell(j);
@@ -181,6 +185,22 @@ namespace OriginGradeTrans
                     else
                         CCell[j].SetCellValue(0);
                 }
+
+                if (ExpectedKClass)         //K班特例
+                {
+                    GradeItem it = metaList[i].GetGrade("大学英语（二）");
+                    if (it != null)
+                        CCell[3 + objRect.GetObjectColumn("大学英语（一）")].SetCellValue(it.Value);
+                    else
+                        CCell[3 + objRect.GetObjectColumn("大学英语（一）")].SetCellValue(0);
+
+                    it = metaList[i].GetGrade("大学英语（三）");
+                    if (it != null)
+                        CCell[3+objRect.GetObjectColumn("大学英语（二）")].SetCellValue(it.Value);
+                    else
+                        CCell[3 + objRect.GetObjectColumn("大学英语（二）")].SetCellValue(0);
+                }
+
                 for(int j = 0; j < 3; j++)  //序号、学号、姓名
                 {
                     CCell[j] = CLine.CreateCell(j);
