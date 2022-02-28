@@ -69,7 +69,7 @@ namespace OriginGradeTrans
             String ObjName_Current;
             String ObjType_Current;
             
-            while (Row_One != null)
+            while (Row_One != null && Row_One.Cells.Count > 6)
             {
                 ObjName_Current = Row_One.GetCell(6).ToString();
                 ObjType_Current = Row_One.GetCell(7).ToString();
@@ -190,16 +190,21 @@ namespace OriginGradeTrans
                 if (ExpectedKClass)         //K班特例
                 {
                     GradeItem it = metaList[i].GetGrade("大学英语（二）");
-                    if (it != null)
-                        CCell[3 + objRect.GetObjectColumn("大学英语（一）")].SetCellValue(it.Value);
-                    else
-                        CCell[3 + objRect.GetObjectColumn("大学英语（一）")].SetCellValue(0);
+                    if (objRect.GetObjectColumn("大学英语（一）") != -1)
+                    {
+                        if (it != null)
+                            CCell[3 + objRect.GetObjectColumn("大学英语（一）")].SetCellValue(it.Value);
+                        else
+                            CCell[3 + objRect.GetObjectColumn("大学英语（一）")].SetCellValue(0);
+                    }
 
                     it = metaList[i].GetGrade("大学英语（三）");
-                    if (it != null)
-                        CCell[3+objRect.GetObjectColumn("大学英语（二）")].SetCellValue(it.Value);
-                    else
-                        CCell[3 + objRect.GetObjectColumn("大学英语（二）")].SetCellValue(0);
+                    if (objRect.GetObjectColumn("大学英语（二）") != -1) {
+                        if (it != null )
+                            CCell[3 + objRect.GetObjectColumn("大学英语（二）")].SetCellValue(it.Value);
+                        else
+                            CCell[3 + objRect.GetObjectColumn("大学英语（二）")].SetCellValue(0);
+                    }
                 }
 
                 for(int j = 0; j < 3; j++)  //序号、学号、姓名

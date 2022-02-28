@@ -19,3 +19,5 @@ C:\Users\guoku\source\repos\OriginGradeTrans\OriginGradeTrans\obj\Debug\OriginGr
 C:\Users\guoku\source\repos\OriginGradeTrans\OriginGradeTrans\obj\Debug\OriginGradeTrans.csproj.CoreCompileInputs.cache
 C:\Users\guoku\source\repos\OriginGradeTrans\OriginGradeTrans\obj\Debug\OriginGradeTrans.exe
 C:\Users\guoku\source\repos\OriginGradeTrans\OriginGradeTrans\obj\Debug\OriginGradeTrans.pdb
+C:\Users\guoku\source\repos\OriginGradeTrans\OriginGradeTrans\obj\Debug\OriginGradeTrans.csproj.SuggestedBindingRedirects.cache
+C:\Users\guoku\source\repos\OriginGradeTrans\OriginGradeTrans\obj\Debug\OriginGradeTrans.csproj.CopyComplete
